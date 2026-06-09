@@ -4,30 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Work Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1>My Work Experience</h1>
-    <p class="subtitle"><!-- STUDENT: Replace this with your name --><span class="placeholder">Your Name Here</span></p>
-    <p class="dates">Wednesday 16 July – Friday 17 July, 2026</p>
+    <div class="header-glow"></div>
+    <div class="header-inner">
+      <p class="header-kicker">3 days &middot; 11 sessions</p>
+      <h1>My Work<br>Experience</h1>
+      <p class="subtitle"><!-- STUDENT: Replace this with your name --><span class="placeholder">Your Name Here</span></p>
+      <p class="dates">Wednesday 16 &ndash; Friday 18 July 2026</p>
+      <div class="progress-row">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-label"><span id="progressCount">0</span> of 11 sessions rated</span>
+      </div>
+    </div>
   </header>
+
+  <section class="dc-showcase">
+    <div id="datacenter"></div>
+    <p class="dc-stage-label" id="dcStageLabel">Site preparation pending</p>
+  </section>
 
   <main>
 
     <!-- ── WEDNESDAY ─────────────────────────────────────────── -->
-    <h2 class="day-label">Wednesday 16 July</h2>
+    <div class="day-header">
+      <div class="day-pill">Day 1</div>
+      <span class="day-name">Wednesday <span class="day-date">16 July</span></span>
+      <div class="day-rule"></div>
+      <span class="day-count">5 sessions</span>
+    </div>
 
     <div class="card done" id="finance">
       <div class="card-header">
-        <div>
-          <span class="time">09:00 – 10:00</span>
-          <h3>Finance</h3>
-          <p class="presenter">Glenn Arthur & Elisavet Ntourntouni</p>
+        <div class="card-meta">
+          <span class="session-num">01</span>
+          <div>
+            <span class="time">09:00 &ndash; 10:00</span>
+            <h3>Finance</h3>
+            <p class="presenter">Glenn Arthur &amp; Elisavet Ntourntouni</p>
+          </div>
         </div>
         <div class="stars" data-id="finance">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -38,13 +63,16 @@
 
     <div class="card active" id="it">
       <div class="card-header">
-        <div>
-          <span class="time">10:15 – 11:15</span>
-          <h3>IT <span class="badge">You are here</span></h3>
-          <p class="presenter">Nick de Jong</p>
+        <div class="card-meta">
+          <span class="session-num is-active">02</span>
+          <div>
+            <span class="time">10:15 &ndash; 11:15</span>
+            <h3>IT <span class="badge">You are here</span></h3>
+            <p class="presenter">Nick de Jong</p>
+          </div>
         </div>
         <div class="stars" data-id="it">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -55,13 +83,16 @@
 
     <div class="card" id="hr">
       <div class="card-header">
-        <div>
-          <span class="time">11:30 – 12:30</span>
-          <h3>Human Resources</h3>
-          <p class="presenter">Tara Foy & Sancia Schepers</p>
+        <div class="card-meta">
+          <span class="session-num">03</span>
+          <div>
+            <span class="time">11:30 &ndash; 12:30</span>
+            <h3>Human Resources</h3>
+            <p class="presenter">Tara Foy &amp; Sancia Schepers</p>
+          </div>
         </div>
         <div class="stars" data-id="hr">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -72,13 +103,16 @@
 
     <div class="card" id="travel">
       <div class="card-header">
-        <div>
-          <span class="time">13:30 – 14:30</span>
-          <h3>Travel</h3>
-          <p class="presenter">Tara Bassham</p>
+        <div class="card-meta">
+          <span class="session-num">04</span>
+          <div>
+            <span class="time">13:30 &ndash; 14:30</span>
+            <h3>Travel</h3>
+            <p class="presenter">Tara Bassham</p>
+          </div>
         </div>
         <div class="stars" data-id="travel">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -89,13 +123,16 @@
 
     <div class="card" id="sales">
       <div class="card-header">
-        <div>
-          <span class="time">14:45 – 15:45</span>
-          <h3>Sales & Marketing</h3>
-          <p class="presenter">Nadia Thatcher & Lindsay Clark</p>
+        <div class="card-meta">
+          <span class="session-num">05</span>
+          <div>
+            <span class="time">14:45 &ndash; 15:45</span>
+            <h3>Sales &amp; Marketing</h3>
+            <p class="presenter">Nadia Thatcher &amp; Lindsay Clark</p>
+          </div>
         </div>
         <div class="stars" data-id="sales">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -105,17 +142,25 @@
     </div>
 
     <!-- ── THURSDAY ─────────────────────────────────────────── -->
-    <h2 class="day-label">Thursday 17 July</h2>
+    <div class="day-header">
+      <div class="day-pill">Day 2</div>
+      <span class="day-name">Thursday <span class="day-date">17 July</span></span>
+      <div class="day-rule"></div>
+      <span class="day-count">4 sessions</span>
+    </div>
 
     <div class="card" id="project">
       <div class="card-header">
-        <div>
-          <span class="time">09:00 – 10:00</span>
-          <h3>Project Coordination</h3>
-          <p class="presenter">Rosa Lehikoinen</p>
+        <div class="card-meta">
+          <span class="session-num">06</span>
+          <div>
+            <span class="time">09:00 &ndash; 10:00</span>
+            <h3>Project Coordination</h3>
+            <p class="presenter">Rosa Lehikoinen</p>
+          </div>
         </div>
         <div class="stars" data-id="project">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -126,13 +171,16 @@
 
     <div class="card" id="design">
       <div class="card-header">
-        <div>
-          <span class="time">10:15 – 11:15</span>
-          <h3>Design (CAD & BIM)</h3>
-          <p class="presenter">Dave Underhay</p>
+        <div class="card-meta">
+          <span class="session-num">07</span>
+          <div>
+            <span class="time">10:15 &ndash; 11:15</span>
+            <h3>Design (CAD &amp; BIM)</h3>
+            <p class="presenter">Dave Underhay</p>
+          </div>
         </div>
         <div class="stars" data-id="design">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -143,13 +191,16 @@
 
     <div class="card" id="hse">
       <div class="card-header">
-        <div>
-          <span class="time">11:30 – 12:30</span>
-          <h3>Health, Safety & Environment</h3>
-          <p class="presenter">Andrew Pirrie</p>
+        <div class="card-meta">
+          <span class="session-num">08</span>
+          <div>
+            <span class="time">11:30 &ndash; 12:30</span>
+            <h3>Health, Safety &amp; Environment</h3>
+            <p class="presenter">Andrew Pirrie</p>
+          </div>
         </div>
         <div class="stars" data-id="hse">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -160,13 +211,16 @@
 
     <div class="card" id="compliance">
       <div class="card-header">
-        <div>
-          <span class="time">13:30 – 14:30</span>
-          <h3>Compliance & Legal</h3>
-          <p class="presenter">Sara Rozhaja & Yuta Haugland</p>
+        <div class="card-meta">
+          <span class="session-num">09</span>
+          <div>
+            <span class="time">13:30 &ndash; 14:30</span>
+            <h3>Compliance &amp; Legal</h3>
+            <p class="presenter">Sara Rozhaja &amp; Yuta Haugland</p>
+          </div>
         </div>
         <div class="stars" data-id="compliance">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -176,17 +230,25 @@
     </div>
 
     <!-- ── FRIDAY ───────────────────────────────────────────── -->
-    <h2 class="day-label">Friday 18 July</h2>
+    <div class="day-header">
+      <div class="day-pill">Day 3</div>
+      <span class="day-name">Friday <span class="day-date">18 July</span></span>
+      <div class="day-rule"></div>
+      <span class="day-count">2 sessions</span>
+    </div>
 
     <div class="card" id="commercial">
       <div class="card-header">
-        <div>
-          <span class="time">09:00 – 10:00</span>
-          <h3>Commercial</h3>
-          <p class="presenter">Annika Schlarmann & Holly Hurrell</p>
+        <div class="card-meta">
+          <span class="session-num">10</span>
+          <div>
+            <span class="time">09:00 &ndash; 10:00</span>
+            <h3>Commercial</h3>
+            <p class="presenter">Annika Schlarmann &amp; Holly Hurrell</p>
+          </div>
         </div>
         <div class="stars" data-id="commercial">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -197,13 +259,16 @@
 
     <div class="card" id="sitevisit">
       <div class="card-header">
-        <div>
-          <span class="time">10:00 onwards</span>
-          <h3>Site Visit</h3>
-          <p class="presenter">Annika Schlarmann</p>
+        <div class="card-meta">
+          <span class="session-num">11</span>
+          <div>
+            <span class="time">10:00 onwards</span>
+            <h3>Site Visit</h3>
+            <p class="presenter">Annika Schlarmann</p>
+          </div>
         </div>
         <div class="stars" data-id="sitevisit">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
         </div>
       </div>
       <label>What I learned:</label>
@@ -215,9 +280,10 @@
   </main>
 
   <footer>
-    <p>Built during the IT session — Wednesday 16 July 2026</p>
+    <p>Built during the IT session &mdash; Wednesday 16 July 2026</p>
   </footer>
 
+  <script src="datacenter.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
